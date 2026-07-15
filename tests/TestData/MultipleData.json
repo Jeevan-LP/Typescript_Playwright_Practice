@@ -1,0 +1,18 @@
+[
+  {
+    "CommanData": [
+      {
+        "Company": "ABC Company",
+        "Type": "ABC Type",
+        "Sub Type": "ABC Sub Type"
+      }
+    ],
+    "WorkOrderData": [
+      {
+        "WO_Amount": "1000",
+        "WO_QTY": "20",
+        "WO_Rate": "800"
+      }
+    ]
+  }
+]

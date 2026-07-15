@@ -1,0 +1,17 @@
+[
+    {
+        "UserNAme":"standard_user",
+        "Password":"secret_sauce"
+
+    },
+    {
+        "UserNAme":"visual_user",
+        "Password":"secret_sauce"
+
+    },
+    {
+        "UserNAme":"problem_user",
+        "Password":"secret_sauce"
+
+    }
+]
