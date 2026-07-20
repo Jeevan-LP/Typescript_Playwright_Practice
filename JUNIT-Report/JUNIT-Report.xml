@@ -1,0 +1,49 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="26.033336">
+<testsuite name="Reports\HandlingAllure-Reports.spec.ts" timestamp="2026-07-20T08:35:11.917Z" hostname="chromium" tests="2" failures="1" skipped="0" time="10.903" errors="0">
+<testcase name="Demo group test › Subscribe" classname="Reports\HandlingAllure-Reports.spec.ts" time="7.969">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\error-context.md]]
+
+[[ATTACHMENT|..\test-results\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  [chromium] › Reports\HandlingAllure-Reports.spec.ts:51:9 › Demo group test › Subscribe ───────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected: "Jeevan"
+    Received: "Demo Web Shop"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        13 × unexpected value "Demo Web Shop"
+
+
+      52 |             await testPage.locator("#newsletter-email").fill("jeevangowda016@gmail.com");
+      53 |             await testPage.locator("#newsletter-subscribe-button").click();
+    > 54 |             await expect(testPage).toHaveTitle("Jeevan")
+         |                                    ^
+      55 |     })
+      56 |
+      57 |     test("Poll Vote", async()=>{
+        at C:\Visual Studio\Playwright_Practice\tests\Reports\HandlingAllure-Reports.spec.ts:54:36
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\error-context.md
+
+    Error Context: ..\test-results\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Demo group test › Poll Vote" classname="Reports\HandlingAllure-Reports.spec.ts" time="2.934">
+</testcase>
+</testsuite>
+</testsuites>

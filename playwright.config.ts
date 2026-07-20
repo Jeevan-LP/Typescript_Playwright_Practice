@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { workers } from 'node:cluster';
 
 const isCi = !!((globalThis as any).process?.env?.CI);
 
@@ -15,30 +16,49 @@ const isCi = !!((globalThis as any).process?.env?.CI);
  */
 export default defineConfig({
 
-    //timeout:60000,
-    //expect:{timeout:30000},
-    
+  /* waits */
+  //timeout:60000,
+  //expect:{timeout:30000},
+  
+  /* tags */
+  //grep:/@Sanity/,
+  //grep:[/@Sanity/,/@Regression/],
+  //grepInvert:/@Regression/,
 
+  /* parallel execution */
+  fullyParallel:false,
+  workers:5,
+
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  //reporter: 'html',
+  reporter:[['html', {open:'always', outputFolder:'HTML-Report'}],//to create custom folder for html report
+            ['line'],
+            ['list'],
+            ['dot'],
+            ['junit', {outputFile:'JUNIT-Report/JUNIT-Report.xml'}],//to create custom folder for junit report
+            ['json', {outputFile:'JSON-Report/JSON-Report.json'}],//to create custom folder for json report
+            ['allure-playwright',{open:'on-failure'}]
+           ],
 
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  //fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   //retries: process.env.CI ? 2 : 0,
 
   //for playwright global test to handle flaky test
-  retries:3,
+  //retries:3,
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //workers: process.env.CI ? 1 : undefined,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    screenshot:'off',
+    headless:false,
+    screenshot:'only-on-failure',
     trace: 'off',
+    video:'retain-on-failure',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -50,11 +70,15 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+        //fullyParallel:true,
+        //workers:5,
     },
 /*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
+        //fullyParallel:false,
+        //workers:1,
     },
 
     {
