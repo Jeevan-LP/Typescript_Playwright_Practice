@@ -4,7 +4,7 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Visual Studio\\Playwright_Practice\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "HandlingAllure-Reports.spec.ts"
+      "HandlingsaucedemoPageObjectTest.spec.ts"
     ],
     "configFile": "C:\\Visual Studio\\Playwright_Practice\\playwright.config.ts",
     "rootDir": "C:/Visual Studio/Playwright_Practice/tests",
@@ -93,136 +93,85 @@
   },
   "suites": [
     {
-      "title": "Reports\\HandlingAllure-Reports.spec.ts",
-      "file": "Reports/HandlingAllure-Reports.spec.ts",
+      "title": "POM\\HandlingsaucedemoPageObjectTest.spec.ts",
+      "file": "POM/HandlingsaucedemoPageObjectTest.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Demo group test",
-          "file": "Reports/HandlingAllure-Reports.spec.ts",
-          "line": 50,
-          "column": 6,
-          "specs": [
+          "title": "saucedemo test",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": "Subscribe",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32889,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 7969,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Jeevan\"\u001b[39m\nReceived: \u001b[31m\"Demo Web Shop\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Demo Web Shop\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Jeevan\"\u001b[39m\nReceived: \u001b[31m\"Demo Web Shop\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Demo Web Shop\"\u001b[22m\n\n    at C:\\Visual Studio\\Playwright_Practice\\tests\\Reports\\HandlingAllure-Reports.spec.ts:54:36",
-                        "location": {
-                          "file": "C:\\Visual Studio\\Playwright_Practice\\tests\\Reports\\HandlingAllure-Reports.spec.ts",
-                          "column": 36,
-                          "line": 54
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 52 |\u001b[39m             \u001b[36mawait\u001b[39m testPage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#newsletter-email\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"jeevangowda016@gmail.com\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m             \u001b[36mawait\u001b[39m testPage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#newsletter-subscribe-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m             \u001b[36mawait\u001b[39m expect(testPage)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[32m\"Jeevan\"\u001b[39m)\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m     })\n \u001b[90m 56 |\u001b[39m\n \u001b[90m 57 |\u001b[39m     test(\u001b[32m\"Poll Vote\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[0m"
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Visual Studio\\Playwright_Practice\\tests\\POM\\HandlingsaucedemoPageObject.spec.ts",
+                        "column": 66,
+                        "line": 24
                       },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Visual Studio\\Playwright_Practice\\tests\\Reports\\HandlingAllure-Reports.spec.ts",
-                            "column": 36,
-                            "line": 54
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Jeevan\"\u001b[39m\nReceived: \u001b[31m\"Demo Web Shop\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Demo Web Shop\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 52 |\u001b[39m             \u001b[36mawait\u001b[39m testPage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#newsletter-email\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"jeevangowda016@gmail.com\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m             \u001b[36mawait\u001b[39m testPage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#newsletter-subscribe-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m             \u001b[36mawait\u001b[39m expect(testPage)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[32m\"Jeevan\"\u001b[39m)\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m     })\n \u001b[90m 56 |\u001b[39m\n \u001b[90m 57 |\u001b[39m     test(\u001b[32m\"Poll Vote\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[0m\n\u001b[2m    at C:\\Visual Studio\\Playwright_Practice\\tests\\Reports\\HandlingAllure-Reports.spec.ts:54:36\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-20T08:35:12.713Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Visual Studio\\Playwright_Practice\\test-results\\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Visual Studio\\Playwright_Practice\\test-results\\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\\error-context.md"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Visual Studio\\Playwright_Practice\\test-results\\Reports-HandlingAllure-Reports-Demo-group-test-Subscribe-chromium\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Visual Studio\\Playwright_Practice\\tests\\Reports\\HandlingAllure-Reports.spec.ts",
-                        "column": 36,
-                        "line": 54
-                      }
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Logout' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPOM\\HandlingsaucedemoPageObject.spec.ts:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m logout(){\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtestPage\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m\"Open Menu\"\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtestPage\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m {name\u001b[33m:\u001b[39m\u001b[32m\"Logout\"\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m     }\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m }\u001b[0m\n\u001b[2m    at saucedemoPOM.logout (C:\\Visual Studio\\Playwright_Practice\\tests\\POM\\HandlingsaucedemoPageObject.spec.ts:24:66)\u001b[22m\n\u001b[2m    at C:\\Visual Studio\\Playwright_Practice\\tests\\POM\\HandlingsaucedemoPageObjectTest.spec.ts:11:5\u001b[22m"
                     }
                   ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "9f8f1e447cefbb33c8de-82e170ff110cff102815",
-              "file": "Reports/HandlingAllure-Reports.spec.ts",
-              "line": 51,
-              "column": 9
-            },
-            {
-              "title": "Poll Vote",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-20T17:12:31.674Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "attachments": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2934,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-20T08:35:28.590Z",
-                      "annotations": [],
-                      "attachments": []
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Visual Studio\\Playwright_Practice\\test-results\\POM-HandlingsaucedemoPageObjectTest-saucedemo-test-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Visual Studio\\Playwright_Practice\\test-results\\POM-HandlingsaucedemoPageObjectTest-saucedemo-test-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Visual Studio\\Playwright_Practice\\test-results\\POM-HandlingsaucedemoPageObjectTest-saucedemo-test-chromium\\error-context.md"
                     }
-                  ],
-                  "status": "expected"
+                  ]
                 }
               ],
-              "id": "9f8f1e447cefbb33c8de-0b0ed371554d3ed5e208",
-              "file": "Reports/HandlingAllure-Reports.spec.ts",
-              "line": 57,
-              "column": 9
+              "status": "unexpected"
             }
-          ]
+          ],
+          "id": "6ab1ece31e0814089cae-0cba9a41c0420ff7e385",
+          "file": "POM/HandlingsaucedemoPageObjectTest.spec.ts",
+          "line": 4,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-20T08:35:11.800Z",
-    "duration": 26033.336,
-    "expected": 1,
+    "startTime": "2026-07-20T17:12:30.987Z",
+    "duration": 35623.189000000006,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0

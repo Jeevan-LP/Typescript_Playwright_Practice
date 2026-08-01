@@ -30,15 +30,15 @@ export default defineConfig({
   workers:5,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  //reporter: 'html',
-  reporter:[['html', {open:'always', outputFolder:'HTML-Report'}],//to create custom folder for html report
-            ['line'],
-            ['list'],
-            ['dot'],
-            ['junit', {outputFile:'JUNIT-Report/JUNIT-Report.xml'}],//to create custom folder for junit report
-            ['json', {outputFile:'JSON-Report/JSON-Report.json'}],//to create custom folder for json report
-            ['allure-playwright',{open:'on-failure'}]
-           ],
+  reporter: 'html',
+  // reporter:[['html', {open:'always', outputFolder:'HTML-Report'}],//to create custom folder for html report
+  //           ['line'],
+  //           ['list'],
+  //           ['dot'],
+  //           ['junit', {outputFile:'JUNIT-Report/JUNIT-Report.xml'}],//to create custom folder for junit report
+  //           ['json', {outputFile:'JSON-Report/JSON-Report.json'}],//to create custom folder for json report
+  //           ['allure-playwright',{open:'on-failure'}]
+  //          ],
 
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -56,9 +56,9 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless:false,
-    screenshot:'only-on-failure',
-    trace: 'off',
-    video:'retain-on-failure',
+    // screenshot:'only-on-failure',
+    // trace: 'off',
+    // video:'retain-on-failure',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
