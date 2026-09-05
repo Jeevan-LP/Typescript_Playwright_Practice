@@ -1,0 +1,3 @@
+-------------javaScript alert---------------
+Alert type is:  alert
+Alert message is:  I am an alert box!

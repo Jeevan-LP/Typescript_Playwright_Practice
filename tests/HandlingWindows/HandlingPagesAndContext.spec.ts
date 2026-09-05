@@ -11,7 +11,6 @@ test("Handling windows---Pages", async()=>{
     const textContext=await browser.newContext();
 
     const page1=await textContext.newPage();
-
     await page1.goto("https://testautomationpractice.blogspot.com/");
     await page1.waitForTimeout(3000);
     await expect(page1).toHaveURL("https://testautomationpractice.blogspot.com/");
@@ -20,16 +19,14 @@ test("Handling windows---Pages", async()=>{
     await page2.goto("https://demowebshop.tricentis.com/");
     await page2.waitForTimeout(5000);
     await expect(page2).toHaveURL("https://demowebshop.tricentis.com/");
-
 })
 
-test("Handling windows---Context", async()=>{
+test("Handling windows---Context and Pages", async()=>{
 
     const browser=await chromium.launch();
 
     const textContext1=await browser.newContext();
     const page1=await textContext1.newPage();
-
     await page1.goto("https://testautomationpractice.blogspot.com/");
     await page1.waitForTimeout(5000);
     await expect(page1).toHaveURL("https://testautomationpractice.blogspot.com/");
@@ -42,7 +39,6 @@ test("Handling windows---Context", async()=>{
     
     const textContext2=await browser.newContext();
     const page11=await textContext2.newPage();
-
     await page11.goto("https://obstaclecourse.tricentis.com/Obstacles/List?page=1");
     await page11.waitForTimeout(5000);
     await expect(page11).toHaveTitle("Tricentis Obstacle Course • Obstacle List");
@@ -56,7 +52,7 @@ test("Handling windows---Context", async()=>{
 
 })
 
-test("Handling windows", async()=>{
+test("Handling windows sizes", async()=>{
 
     const browser=await chromium.launch();
     const textContext=await browser.newContext();
@@ -99,5 +95,4 @@ test.only("Handling browser navigation", async()=>{
     await page.goBack();
     await page.waitForTimeout(2000);
 
-   
 })

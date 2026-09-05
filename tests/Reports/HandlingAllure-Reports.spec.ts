@@ -11,7 +11,7 @@ allure --version
 
 step: 3 adding allure in playwright.config.ts file
 a. export default defineConfig({
-	reporter:'allure-playwright'
+	reporter:[['allure-playwright']]
 });
 b. on running test automatically allure-results folder will created
 

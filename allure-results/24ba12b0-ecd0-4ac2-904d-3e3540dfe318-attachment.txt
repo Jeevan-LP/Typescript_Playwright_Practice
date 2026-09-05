@@ -1,0 +1,13 @@
+[
+  {
+    name: 'Sudo Cookies',
+    value: 'Sudo Cookies Value',
+    domain: 'www.saucedemo.com',
+    path: '/',
+    expires: -1,
+    httpOnly: true,
+    secure: true,
+    sameSite: 'Lax'
+  }
+]
+found cookies is:  undefined

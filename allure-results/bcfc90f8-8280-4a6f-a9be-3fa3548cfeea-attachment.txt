@@ -1,0 +1,12 @@
+[
+  {
+    name: 'Sudo Cookies',
+    value: 'Sudo Cookies Value',
+    domain: 'www.saucedemo.com',
+    path: '/',
+    expires: -1,
+    httpOnly: false,
+    secure: true,
+    sameSite: 'Lax'
+  }
+]

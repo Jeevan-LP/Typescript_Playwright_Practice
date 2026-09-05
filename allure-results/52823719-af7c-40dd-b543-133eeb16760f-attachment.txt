@@ -1,0 +1,7 @@
+No of rows:  5
+[]
+[ 'System', '84.3 MB', '3.0%', '0.12 MB/s', '7.9 Mbps' ]
+[ 'Internet Explorer', '67.3 MB', '7.6%', '0.12 MB/s', '1.9 Mbps' ]
+[ 'Chrome', '30.2 MB', '7.6%', '0.70 MB/s', '2.3 Mbps' ]
+[ 'Firefox', '95.3 MB', '6.5%', '0.02 MB/s', '9.2 Mbps' ]
+[]

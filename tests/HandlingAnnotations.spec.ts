@@ -1,5 +1,22 @@
 import {test} from "@playwright/test";
+/**
+Interview answer
 
+Annotations are used to provide additional information or control test execution. 
+Common Playwright annotations include test.skip(), test.fail(), test.fixme(), and test.slow(). 
+We can also use tags such as @smoke and @regression to categorize and selectively execute tests.
+
+| Annotation                  | Purpose                        |
+| --------------------------- | ------------------------------ |
+| `test.skip()`               | Skip test                      |
+| `test.fail()`               | Test is expected to fail       |
+| `test.fixme()`              | Known broken test; don't run   |
+| `test.slow()`               | Increase timeout for slow test |
+| `test.only()`               | Run only selected test         |
+| `test.describe.configure()` | Configure test group           |
+| `@smoke` / `@regression`    | Custom test tags               |
+
+ */
 test("Test Annotation", async()=>{
     console.log("Test Annotation...")
 });
@@ -25,7 +42,8 @@ test.fail("Test Fail Annotation", async()=>{
 });
 
 test.fixme("Test fixme Annotation", async({page})=>{
-    //same like a skip. marks the test as failing. Playwright will not run this test. Use fixme when running the test is slow or crashes.
+    //same like a skip. marks the test as failing. Playwright will not run this test. 
+    //Use fixme when running the test is slow or crashes.
     console.log("Test fixme Annotation...")
 })
 

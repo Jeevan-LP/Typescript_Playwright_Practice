@@ -35,6 +35,9 @@ test("single and multiple Upload file only if not present in input tag", async (
   //single file upload
   const [singleFile]=await Promise.all([page.waitForEvent("filechooser"), page.locator("#singleFileInput").click()]);
   singleFile.setFiles("tests/Files/State Scholarship Portal.pdf");
+
+  //const [singleFile]=await Promise.all([page.waitForEvent("filechooser").then(file=> file.setFiles("tests/Files/State Scholarship Portal.pdf")),
+  //page.locator("#singleFileInput").click()]);
   
   await page.waitForTimeout(2000);
 
@@ -56,7 +59,7 @@ test("single and multiple Upload file only if not present in input tag", async (
 
   await page.goto("https://the-internet.herokuapp.com/download");
 
-    const [downloadFile]=await Promise.all([page.waitForEvent("download"), page.getByText("googlelogo_color_92x30dp.png").click()]);
+    const [downloadFile]=await Promise.all([page.waitForEvent('download'), page.getByText("testing.pdf").click()]);
     await downloadFile.saveAs('Downloads/' + downloadFile.suggestedFilename());
     console.log(downloadFile.suggestedFilename());
 

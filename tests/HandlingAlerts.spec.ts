@@ -1,6 +1,6 @@
 import {test, expect, Locator} from "@playwright/test";
 
-test("javaScript alert", async({page})=>{
+test.only("javaScript alert", async({page})=>{
     
     //1. javaScript alert
     await page.goto("https://testautomationpractice.blogspot.com/");
@@ -52,7 +52,7 @@ test("Confirmation Alert", async({page})=>{
     await page.waitForTimeout(3000);
 });
 
-test.only("Prompt Alert", async({page})=>{
+test("Prompt Alert", async({page})=>{
     
     //3. Prompt alert
     await page.goto("https://testautomationpractice.blogspot.com/");

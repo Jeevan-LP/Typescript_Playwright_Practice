@@ -1,8 +1,16 @@
 import {test, expect, chromium} from "@playwright/test";
+/*
+Interview answer
 
-test("Multiple tabs Approach 1", async()=>{
+"In Playwright, both tabs and windows are represented by Page objects. For a newly opened tab or window, 
+I use context.waitForEvent('page'). If it is a popup opened from the current page, I can use page.waitForEvent('popup'). 
+I normally combine the event listener with the action using Promise.all() so that I don't miss the event. 
+For multiple existing tabs or windows, I use context.pages() and identify the required Page object based on its URL, 
+title, or other properties."
+*/
+test("Multiple tabs Approach 1", async({browser})=>{
 
-    const browser=await chromium.launch();
+    //const browser=await chromium.launch();
     const context =await browser.newContext();
     const page=await context.newPage();
 

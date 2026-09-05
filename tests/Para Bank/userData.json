@@ -1,0 +1,20 @@
+[
+    {
+        "Username":"Jeevan",
+        "Password":"Jeevan@123",
+        "AccountType":"SAVINGS",
+        "AccountAmount":"13344"
+    },
+    {
+        "Username":"Appu",
+        "Password":"Appu@123",
+        "AccountType":"CHECKING",
+        "AccountAmount":"16230"
+    },
+    {
+        "Username":"Gowda",
+        "Password":"Gowda@123",
+        "AccountType":"SAVINGS",
+        "AccountAmount":"21114"
+    }
+]

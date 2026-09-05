@@ -1,4 +1,12 @@
 import { test, expect } from "@playwright/test";
+/*
+Interview answer
+
+"Playwright Trace is a debugging feature used to investigate test failures and flaky tests. 
+It captures actions, screenshots, DOM snapshots, network activity, console logs, and timing information. 
+We can configure it in playwright.config.ts, commonly using trace: 'on-first-retry', 
+and view the generated trace using Playwright Trace Viewer.
+*/
 
 /*
 3 ways to create trace file(.zip)
@@ -7,9 +15,9 @@ import { test, expect } from "@playwright/test";
 1) using playwright.config.ts
 
 2) using command
-      npx playwright test mytest.spec.ts --trace on
+      npx playwright test my test.spec.ts --trace on
 
-3) code(programmitically)
+3) code(programmatically)
 
       context.tracing.start({screenshots:true,snapshots:true});
 
@@ -40,9 +48,4 @@ test("Handling Tracing", async ({ page, context }) => {
     await page.locator(".ico-logout").click();
 
     await context.tracing.stop({path: "Trace/trace.zip"});
-
-
-
-
-
 });

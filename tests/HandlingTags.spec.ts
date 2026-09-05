@@ -9,7 +9,7 @@ e. Sanity which is not belong to Regression: 1. npx playwright test HandlingTags
 f. Regression which is not belong to Sanity: 1. npx playwright test HandlingTags.spec.ts --grep-invert "@Sanity"
                                              2. npx playwright test HandlingTags.spec.ts --grep "Regression" --grep-invert "Sanity"
 g. Above steps are for terminal
-h. Same we can do in playwright.config.ts file as well at default defineConfig
+h. Same we can do in playwright.config.ts file as well at default define Config
 i. grep:/@Sanity/,
    grep:[/@Sanity/,/@Regression/],
    grepInvert:/@Regression/

@@ -1,0 +1,22 @@
+All cookies:  [
+  {
+    name: 'ASP.NET_SessionId',
+    value: 'ote4e4zm33cg2dhe4xabuuim',
+    domain: 'vm-in4qa.in4suite.com',
+    path: '/',
+    expires: -1,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'Lax'
+  },
+  {
+    name: '__RequestVerificationToken_L0luNFN1aXRlR2VuZXJpYw2',
+    value: 'roNgq9yje_tixEep6evQE9ug5iyZ_TXkEysO-0JSoOjt4WwjLRESg9aJ87DB5FEbhChj_gNCanxC9IkkRtHQextmxHC1HH21gJqjqyzFmYYTwy15cWKNVlzsKTXX8b-x4T4w_s6H75QKtBgmX7RE_A2',
+    domain: 'vm-in4qa.in4suite.com',
+    path: '/',
+    expires: -1,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'Lax'
+  }
+]

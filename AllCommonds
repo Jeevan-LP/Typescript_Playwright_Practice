@@ -1,62 +1,62 @@
 Difference Between npm and npx
 
-| **npm**                                 | **npx**                                         |
-| --------------------------------------- | ----------------------------------------------- |
-| Installs and manages packages.          | Runs packages without installing them globally. |
-| Used for dependency management.         | Used to execute CLI tools.                      |
-| Example: `npm install @playwright/test` | Example: `npx playwright test`                  |
+| **npm**                                 | **npx**                                         
+| --------------------------------------- | ----------------------------------------------- 
+| Installs and manages packages.          | Runs packages without installing them globally. 
+| Used for dependency management.         | Used to execute CLI tools.                      
+| Example: `npm install @playwright/test` | Example: `npx playwright test`                  
 
 
 NPX Commands
 -----------------------------------------------------------------------------------------------------------------------------
-| **Command**                                | **Purpose**                                                    |
-| -------------------------------------------| -------------------------------------------------------------- |
-| npm init playwright@latest                 | Creates a new Playwright project.                              |
-| npx playwright install                     | Installs Playwright browsers (Chromium, Firefox, WebKit).      |
-| npx playwright --version                   | Shows the installed Playwright version.                        |
-| npx playwright test                        | Runs all test files in the project.                            |
-| npx playwright test login.spec.ts          | Runs a specific test file.                                     |
-| npx playwright test -g "Login Test"        | Runs a test by its title/name.                                 |
-| npx playwright test --grep "checkout"      | Runs tests matching a keyword or pattern.                      |
-| npx playwright test --project=chromium     | Runs tests only in the Chromium browser.                       |
-| npx playwright test --headed               | Runs tests with the browser visible.                           |
-| npx playwright test --debug                | Opens Playwright Inspector for debugging.                      |
-| npx playwright test --ui                   | Opens Playwright UI Mode to run and debug tests interactively. |
-| npx playwright test --trace on             | Records a trace for every test execution.                      |
-| npx playwright codegen https://example.com | Records browser actions and generates Playwright code.         |
-| npx playwright show-report                 | Opens the HTML test report in the browser.                     |
-| npx playwright test --workers=1            | Runs tests one by one (sequentially).                          |
-| npx playwright test --last-failed          | Runs only the tests that failed in the previous run.           |
-| npx playwright test --list                 | Lists all available tests without running them.                |
-| npx playwright --help                      | Displays all Playwright CLI commands.                          |
-| npx playwright test --help                 | Displays all options available for the `test` command.         |
+| **Command**                                | **Purpose**                                                    
+| -------------------------------------------| -------------------------------------------------------------- 
+| npm init playwright@latest                 | Creates a new Playwright project.                              
+| npx playwright install                     | Installs Playwright browsers (Chromium, Firefox, WebKit).      
+| npx playwright --version                   | Shows the installed Playwright version.                        
+| npx playwright test                        | Runs all test files in the project.                            
+| npx playwright test login.spec.ts          | Runs a specific test file.                                     
+| npx playwright test -g "Login Test"        | Runs a test by its title/name.                                 
+| npx playwright test --grep "checkout"      | Runs tests matching a keyword or pattern.                      
+| npx playwright test --project=chromium     | Runs tests only in the Chromium browser.                       
+| npx playwright test --headed               | Runs tests with the browser visible.                           
+| npx playwright test --debug                | Opens Playwright Inspector for debugging.                      
+| npx playwright test --ui                   | Opens Playwright UI Mode to run and debug tests interactively. 
+| npx playwright test --trace on             | Records a trace for every test execution.                      
+| npx playwright codegen https://example.com | Records browser actions and generates Playwright code.         
+| npx playwright show-report                 | Opens the HTML test report in the browser.                     
+| npx playwright test --workers=1            | Runs tests one by one (sequentially).                          
+| npx playwright test --last-failed          | Runs only the tests that failed in the previous run.           
+| npx playwright test --list                 | Lists all available tests without running them.                
+| npx playwright --help                      | Displays all Playwright CLI commands.                          
+| npx playwright test --help                 | Displays all options available for the `test` command.         
 
 NPM Commands
 ------------------------------------------------------------------------------------------------------------------------------
-| **Command**                   | **Purpose**                                     |
-| ------------------------------| ----------------------------------------------- |
-| npm --version                 | Shows the installed npm version.                |
-| node --version                | Shows the installed Node.js version.            |
-| npm init                      | Creates a new `package.json` file.              |
-| npm init -y                   | Creates `package.json` with default values.     |
-| npm install                   | Installs all dependencies from `package.json`.  |
-| npm install <package-name>    | Installs a specific package.                    |
-| npm install -D <package-name> | Installs a package as a development dependency. |
-| npm install -g <package-name> | Installs a package globally.                    |
-| npm uninstall <package-name>  | Removes a package.                              |
-| npm update                    | Updates installed packages.                     |
-| npm outdated                  | Shows packages that have updates available.     |
-| npm list                      | Lists installed packages.                       |
-| npm list -g                   | Lists globally installed packages.              |
-| npm cache clean --force       | Clears the npm cache.                           |
-| npm audit                     | Checks for security vulnerabilities.            |
-| npm audit fix                 | Fixes security vulnerabilities automatically.   |
-| npm run <script-name>         | Runs a script from `package.json`.              |
-| npm run test                  | Runs the `test` script.                         |
-| npm run build                 | Runs the `build` script.                        |
-| npm run start                 | Runs the `start` script.                        |
-| npm run dev                   | Runs the `dev` script (if available).           |
-| npm help                      | Shows npm help information.                     |
-| npm config list               | Displays npm configuration settings.            |
-| npm config get registry       | Shows the current npm registry URL.             |
-| npm config set registry <url> | Changes the npm registry URL.                   |
+| **Command**                   | **Purpose**                                     
+| ------------------------------| ----------------------------------------------- 
+| npm --version                 | Shows the installed npm version.                
+| node --version                | Shows the installed Node.js version.            
+| npm init                      | Creates a new `package.json` file.              
+| npm init -y                   | Creates `package.json` with default values.     
+| npm install                   | Installs all dependencies from `package.json`.  
+| npm install <package-name>    | Installs a specific package.                    
+| npm install -D <package-name> | Installs a package as a development dependency. 
+| npm install -g <package-name> | Installs a package globally.                    
+| npm uninstall <package-name>  | Removes a package.                              
+| npm update                    | Updates installed packages.                     
+| npm outdated                  | Shows packages that have updates available.     
+| npm list                      | Lists installed packages.                       
+| npm list -g                   | Lists globally installed packages.              
+| npm cache clean --force       | Clears the npm cache.                           
+| npm audit                     | Checks for security vulnerabilities.            
+| npm audit fix                 | Fixes security vulnerabilities automatically.   
+| npm run <script-name>         | Runs a script from `package.json`.              
+| npm run test                  | Runs the `test` script.                         
+| npm run build                 | Runs the `build` script.                        
+| npm run start                 | Runs the `start` script.                        
+| npm run dev                   | Runs the `dev` script (if available).           
+| npm help                      | Shows npm help information.                     
+| npm config list               | Displays npm configuration settings.            
+| npm config get registry       | Shows the current npm registry URL.             
+| npm config set registry <url> | Changes the npm registry URL.                   

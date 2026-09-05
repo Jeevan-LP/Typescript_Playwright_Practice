@@ -1,4 +1,4 @@
-import {test,Page,Browser,BrowserContext} from "@playwright/test";
+import {test,Page} from "@playwright/test";
 let testPage: Page;
 /*
   reporter:[['html', {open:'always', outputFolder:'HTML-Report'}],//to create custom folder for html report
@@ -12,6 +12,16 @@ let testPage: Page;
             ['json', {outputFile:'JSON-Report/JSON-Report.json'}]//to create custom folder for json report
             commond to open report: npx playwright show-report JSON-Report
            ],
+
+| Reporter  | Small definition                                                                                                                            |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **HTML**  | Generates a **visual web report** showing test results, errors, steps, screenshots, traces, etc.                                            |
+| **Line**  | Displays test execution results **line by line in the terminal**. Good for simple/clean console output.                                     |
+| **List**  | Shows each test and its **execution status/details in the terminal**. More detailed than `line`.                                            |
+| **Dot**   | Shows **one dot per test** in the terminal. Very compact output.                                                                            |
+| **JUnit** | Generates test results in **JUnit XML format**, mainly used for **CI/CD tools** like Jenkins.                                               |
+| **JSON**  | Generates test results in **JSON format**, useful when another tool/application needs to **read or process 
+              test results programmatically**.
  */
 
 test.beforeAll("Launching Browser", async({browser})=>{
@@ -19,7 +29,7 @@ test.beforeAll("Launching Browser", async({browser})=>{
     await testPage.goto("https://demowebshop.tricentis.com/");
 });
 
-test.afterAll("Closing Browser", async({browser})=>{
+test.afterAll("Closing Browser", async()=>{
     await testPage.close();
 });
 

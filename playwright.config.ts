@@ -22,15 +22,18 @@ export default defineConfig({
   
   /* tags */
   //grep:/@Sanity/,
-  //grep:[/@Sanity/,/@Regression/],
+  //grep:/(?=.*@Sanity)(?=.*@Regression)/,
+  //grep:/(@Sanity)|(@Regression)/,
   //grepInvert:/@Regression/,
+  //grepInvert:/@Sanity/,
 
   /* parallel execution */
   fullyParallel:false,
   workers:5,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter:[['allure-playwright']],
+  //reporter:[['allure-playwright', {resultsDir:'./report/allure-report'}]],
   // reporter:[['html', {open:'always', outputFolder:'HTML-Report'}],//to create custom folder for html report
   //           ['line'],
   //           ['list'],
@@ -41,6 +44,7 @@ export default defineConfig({
   //          ],
 
   testDir: './tests',
+  outputDir:'./test-output',
   /* Run tests in files in parallel */
   //fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -56,9 +60,10 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless:false,
-    // screenshot:'only-on-failure',
-    // trace: 'off',
-    // video:'retain-on-failure',
+    screenshot:'off',
+    trace: 'off',
+    video:'off',
+    //storageState:'openSource.json',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 

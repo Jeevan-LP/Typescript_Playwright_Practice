@@ -1,0 +1,94 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: HandlingAuthentication.spec.ts >> Create Authentication
+- Location: tests\HandlingAuthentication.spec.ts:3:5
+
+# Error details
+
+```
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+Call log:
+  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: opensource-demo.orangehrmlive.com
+      - text: ’s server IP address could not be found.
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: "Try:"
+      - list [ref=e12]:
+        - listitem [ref=e13]: Checking the connection
+        - listitem [ref=e14]:
+          - link "Checking the proxy, firewall, and DNS configuration" [ref=e15] [cursor=pointer]:
+            - /url: "#buttons"
+        - listitem [ref=e16]:
+          - link "Running Windows Network Diagnostics" [ref=e17] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=e18]: ERR_NAME_NOT_RESOLVED
+  - generic [ref=e19]:
+    - button "Reload" [ref=e21] [cursor=pointer]
+    - button "Details" [ref=e22] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Create Authentication', async ({ browser }) => {
+  4  | 
+  5  |     const context = await browser.newContext();
+  6  |     const page = await context.newPage();
+  7  | 
+> 8  |     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+     |                ^ Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  9  | 
+  10 |     await page.getByPlaceholder('Username').fill('Admin');
+  11 |     await page.getByPlaceholder('Password').fill('admin123');
+  12 |     await page.locator("[type='submit']").click();
+  13 | 
+  14 |     // Verify successful login
+  15 |     await expect(page).toHaveTitle('OrangeHRM');
+  16 | 
+  17 |     // Save authenticated state BEFORE logout
+  18 |     await context.storageState({path: 'openSource.json'});
+  19 | 
+  20 |     //should not logout other wise it does not save credentials
+  21 |     //await page.locator("[class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']").click();
+  22 |     //await page.locator("[role='menuitem']").last().click();
+  23 | 
+  24 |     await context.close();
+  25 | });
+  26 | 
+  27 | 
+  28 | test('Using Authentication', async ({ browser }) => {
+  29 | 
+  30 |     // Load previously saved authentication state
+  31 |     const context = await browser.newContext({storageState: 'openSource.json'});
+  32 | 
+  33 |     const page = await context.newPage();
+  34 |     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  35 | 
+  36 |     await expect(page).toHaveTitle('OrangeHRM');
+  37 | 
+  38 |     // Logout
+  39 |     await page.locator('#react-burger-menu-btn').waitFor();
+  40 |     await page.locator('#react-burger-menu-btn').click();
+  41 |     await page.locator("[role='menuitem']").last().click();
+  42 | 
+  43 |     await context.close();
+  44 | });
+```

@@ -1,0 +1,8 @@
+No of rows:  5
+
+Firefox,3.5 Mbps,6.7%,40.5 MB,0.14 MB/s
+System,3.0 Mbps,3.8%,59.8 MB,0.64 MB/s
+Chrome,9.1 Mbps,0.8%,71.0 MB,0.81 MB/s
+Internet Explorer,8.3 Mbps,6.9%,52.3 MB,0.60 MB/s
+
+[]

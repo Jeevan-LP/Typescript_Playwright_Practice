@@ -1,0 +1,13 @@
+No of rows:  5
+[
+  'Chrome',    '0.32 MB/s',
+  '73.9 MB',   '8.7%',
+  '5.2 Mbps',  'Internet Explorer',
+  '0.39 MB/s', '75.6 MB',
+  '1.9%',      '9.3 Mbps',
+  'Firefox',   '0.32 MB/s',
+  '45.8 MB',   '2.4%',
+  '3.3 Mbps',  'System',
+  '0.30 MB/s', '52.6 MB',
+  '0.5%',      '1.4 Mbps'
+]
