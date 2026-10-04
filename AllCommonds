@@ -29,7 +29,8 @@ NPX Commands
 | npx playwright test --last-failed          | Runs only the tests that failed in the previous run.           
 | npx playwright test --list                 | Lists all available tests without running them.                
 | npx playwright --help                      | Displays all Playwright CLI commands.                          
-| npx playwright test --help                 | Displays all options available for the `test` command.         
+| npx playwright test --help                 | Displays all options available for the `test` command.   
+| npx tsc --init                             | download tsconfig.json file
 
 NPM Commands
 ------------------------------------------------------------------------------------------------------------------------------
