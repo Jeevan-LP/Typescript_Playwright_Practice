@@ -60,4 +60,6 @@ NPM Commands
 | npm help                      | Shows npm help information.                     
 | npm config list               | Displays npm configuration settings.            
 | npm config get registry       | Shows the current npm registry URL.             
-| npm config set registry <url> | Changes the npm registry URL.                   
+| npm config set registry <url> | Changes the npm registry URL.  
+npm install dotenv
+npm install -D @playwright/test : for .env file
