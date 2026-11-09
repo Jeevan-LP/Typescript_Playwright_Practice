@@ -32,9 +32,9 @@ export default defineConfig({
   workers:5,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter:[['allure-playwright']],
+  //reporter:[['allure-playwright']],
   //reporter:[['allure-playwright', {resultsDir:'./report/allure-report'}]],
-  // reporter:[['html', {open:'always', outputFolder:'HTML-Report'}],//to create custom folder for html report
+  reporter:[['html', {open:'on-failure', outputFolder:'HTML-Report'}]],//to create custom folder for html report
   //           ['line'],
   //           ['list'],
   //           ['dot'],
