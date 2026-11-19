@@ -18,8 +18,9 @@ test("Multiple windows", async()=>{
     console.log("Numbers of windows: ", allWindows.length)
 
     for(let window of allWindows){
-        const title=window.title();
-        if((await title).includes('Playwright')){
+        const title=await window.title();
+        console.log(title);
+        if(title.includes('Playwright')){
             await window.getByText('Get started').click();
         }
     }

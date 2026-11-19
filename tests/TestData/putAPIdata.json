@@ -1,0 +1,10 @@
+{           "firstname" : "Jeevan",
+            "lastname" : "L P",
+            "totalprice" : 2709,
+            "depositpaid" : false,
+                "bookingdates" : {
+                "checkin" : "2001-09-27",
+                "checkout" : "2026-11-09"
+                },
+            "additionalneeds" : "Lunch"
+}

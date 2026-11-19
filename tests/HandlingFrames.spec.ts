@@ -6,6 +6,9 @@ test("Handling frames", async({page})=>{
 
     const noOfFrames=page.frames();
     console.log("Number of frames: ", noOfFrames.length);
+    // for(let frame of noOfFrames){
+    //     console.log(frame.name());
+    // }
 
     //Approach 1 using frame: it will allow key value pair - url and name only
     const frame1=page.frame({url: 'https://ui.vision/demo/webtest/frames/frame_1'});
@@ -35,6 +38,10 @@ test("Handling frames", async({page})=>{
     
     const childFrame=frame3?.childFrames();
     console.log("Number of child frames: ", childFrame?.length);
+
+    const parentFrame=frame3?.parentFrame();
+    console.log("name of parent frames: ", parentFrame?.name());
+
 
     if (childFrame && childFrame?.length > 0) {
      const radioButton=childFrame[0].locator("[class='AB7Lab Id5V1']");

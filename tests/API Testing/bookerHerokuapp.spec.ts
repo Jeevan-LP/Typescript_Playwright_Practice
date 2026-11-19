@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test';
+import fs from 'fs';
 
 test.describe.serial('API Testing booker.herokuapp.spec', ()=>{
     
@@ -133,19 +134,9 @@ test.describe.serial('API Testing booker.herokuapp.spec', ()=>{
             'Cookie': `token=${authToken}`
         }
 
-        const putData={
-            "firstname" : "Jeevan",
-            "lastname" : "L P",
-            "totalprice" : 2709,
-            "depositpaid" : false,
-                "bookingdates" : {
-                "checkin" : "2001-09-27",
-                "checkout" : "2026-11-09"
-                },
-            "additionalneeds" : "Lunch"
-        }
+        const putDataFromFile=JSON.parse(fs.readFileSync('./tests/TestData/putAPIdata.json', 'utf-8'));
 
-        const putAPI=await request.put(`${APIurl}/booking/${bookingID}`, {headers:headersData, data:putData});
+        const putAPI=await request.put(`${APIurl}/booking/${bookingID}`, {headers:headersData, data:putDataFromFile});
         //console.log(putAPI);
 
         const putAPIStatusCode:number=putAPI.status();

@@ -7,6 +7,18 @@ I use context.waitForEvent('page'). If it is a popup opened from the current pag
 I normally combine the event listener with the action using Promise.all() so that I don't miss the event. 
 For multiple existing tabs or windows, I use context.pages() and identify the required Page object based on its URL, 
 title, or other properties."
+
+Why should we triggers the event first?
+We should start listening for the event before performing the action because the event may happen immediately after the action. 
+If we start listening later, we might miss the event.
+
+| Feature  | Promise                                       | Promise.all()                                               |
+|----------|-----------------------------------------------|-------------------------------------------------------------|
+| Purpose  | Handles an individual asynchronous operation. | Handles multiple promises together.                         |
+| Result   | Returns one result.                           | Returns an array of results.                                |
+| Waiting  | Waits for that operation to complete.         | Waits for all promises to fulfill.                          |
+| Failure  | Rejects if the operation fails.               | Rejects if any one promise rejects.                         |
+| Use case | Used for handling a single asynchronous task. | Used for handling multiple asynchronous tasks concurrently. |
 */
 test("Multiple tabs Approach 1", async({browser})=>{
 
