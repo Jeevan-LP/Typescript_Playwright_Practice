@@ -1,7 +1,15 @@
 import {test, expect, Locator} from "@playwright/test";
 
 test.only("javaScript alert", async({page})=>{
-    
+
+ /*
+ | Feature                | `page.on('dialog', handler)`           | `page.once('dialog', handler)`                  |
+| ---------------------- | -------------------------------------- | ----------------------------------------------- |
+| When it runs           | Executes every time the event occurs   | Executes only the first time the event occurs   |
+| Listening              | Keeps listening for future events      | Automatically stops listening after first event |
+| Listener removed?      | No, stays until you call `page.off()`  | Yes, removed automatically                      |
+| Best used for          | Pages that show many alerts or popups  | A single expected alert or confirm              |
+ */   
     //1. javaScript alert
     await page.goto("https://testautomationpractice.blogspot.com/");
 
